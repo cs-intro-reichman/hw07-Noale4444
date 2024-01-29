@@ -4,6 +4,9 @@ public class HashTagTokenizer {
 
 	public static void main(String[] args) {
 
+		if(args.length == 0)
+		return;
+
 		String hashTag = args[0];
 		String []dictionary = readDictionary("dictionary.txt");
 		breakHashTag(hashTag, dictionary);
@@ -24,10 +27,11 @@ public class HashTagTokenizer {
 	}
 
 	public static boolean existInDictionary(String word, String []dictionary) {
-		for(int i = 0; i < 3000; i++) { 
-			if(dictionary[i].equals(word))
+		for(int i = 0; i < dictionary.length && dictionary[i] != null; i++) { 
+			if(dictionary[i].equals(word)){
 			return true; 
 		}
+		}	
 		return false;
 	}
 
