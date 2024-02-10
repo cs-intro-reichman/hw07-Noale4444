@@ -30,6 +30,7 @@ public class SpellChecker {
 		word1 = word1.toLowerCase(); 
 		word2 = word2.toLowerCase(); 
 
+		// #feedback - please indent correctly.
 		if(word1.length() == 0)
 		return word2.length();
 		if(word2.length() == 0)
